@@ -1,0 +1,9 @@
+#footer {
+  background-color: #fff;
+}
+#footer-wrap {
+  color: black;
+}
+#footer-wrap .framework-info a{
+  color: aquamarine;
+}
