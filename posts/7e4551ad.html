@@ -1,0 +1,383 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>11js内置对象2 | Hun</title><meta name="author" content="ehco"><meta name="copyright" content="ehco"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="js内置对象2包装类1234567891011121314151617181920let str &#x3D; new String(&amp;#x27;hello&amp;#x27;);let num &#x3D; new Number(11);let bool &#x3D; new Boolean(true);console.log(typeof str, str);console.log(typeof num, num);console">
+<meta property="og:type" content="article">
+<meta property="og:title" content="11js内置对象2">
+<meta property="og:url" content="https://hun.ghao.live/posts/7e4551ad.html">
+<meta property="og:site_name" content="Hun">
+<meta property="og:description" content="js内置对象2包装类1234567891011121314151617181920let str &#x3D; new String(&amp;#x27;hello&amp;#x27;);let num &#x3D; new Number(11);let bool &#x3D; new Boolean(true);console.log(typeof str, str);console.log(typeof num, num);console">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201510%2F27%2F20151027123805_jxVmL.thumb.400_0.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668955992&t=3a44f605814c1174886c67f897e5590d">
+<meta property="article:published_time" content="2022-10-21T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-03-03T06:04:55.046Z">
+<meta property="article:author" content="ehco">
+<meta property="article:tag" content="前端&#x2F;基础&#x2F;js">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201510%2F27%2F20151027123805_jxVmL.thumb.400_0.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668955992&t=3a44f605814c1174886c67f897e5590d"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://hun.ghao.live/posts/7e4551ad.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="baidu-site-verification" content="code-2h0nFZnNKu"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"该文章创建于","messageNext":"天前, 请以最新文章为主"},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":300},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: ehco","link":"链接: ","source":"来源: Hun","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '11js内置对象2',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-03-03 06:04:55'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = url => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      link.onload = () => resolve()
+      link.onerror = () => reject()
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/style.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/./images/touxiang.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">58</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201510%2F27%2F20151027123805_jxVmL.thumb.400_0.jpeg&amp;refer=http%3A%2F%2Fc-ssl.duitang.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1668955992&amp;t=3a44f605814c1174886c67f897e5590d')"><nav id="nav"><span id="blog-info"><a href="/" title="Hun"><span class="site-name">Hun</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">11js内置对象2<a class="post-edit-link" href="https://github.com/ehco666/hexo-source-repo/edit/master/source/_posts/js笔记/11js内置对象2.md" rel="external nofollow noreferrer" title="编辑" target="_blank"><i class="fas fa-pencil-alt"></i></a></h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-10-21T00:00:00.000Z" title="发表于 2022-10-21 00:00:00">2022-10-21</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-03-03T06:04:55.046Z" title="更新于 2023-03-03 06:04:55">2023-03-03</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%89%8D%E7%AB%AF-%E5%9F%BA%E7%A1%80-js/">前端/基础/js</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>7分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="11js内置对象2"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="js内置对象2"><a href="#js内置对象2" class="headerlink" title="js内置对象2"></a>js内置对象2</h1><h2 id="包装类"><a href="#包装类" class="headerlink" title="包装类"></a>包装类</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&#x27;hello&#x27;</span>);</span><br><span class="line"><span class="keyword">let</span> num = <span class="keyword">new</span> <span class="title class_">Number</span>(<span class="number">11</span>);</span><br><span class="line"><span class="keyword">let</span> bool = <span class="keyword">new</span> <span class="title class_">Boolean</span>(<span class="literal">true</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> str, str);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> num, num);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> bool, bool);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> bool2 = <span class="keyword">new</span> <span class="title class_">Boolean</span>(<span class="literal">true</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> bool2, bool2);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(bool === bool2); <span class="comment">//false</span></span><br><span class="line"><span class="comment">//包装类的作用</span></span><br><span class="line"><span class="keyword">let</span> str2 = <span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line"><span class="comment">//向原始值添加属性, 创建临时对象( new String() )</span></span><br><span class="line">str.<span class="property">name</span> = <span class="string">&#x27;哈哈&#x27;</span>;</span><br><span class="line"><span class="comment">//读取原始的属性, 再次创建临时对象(两次创建的对象在创建后就销毁了, 因此并不是用一个对象, 所以无法读取name属性返回undefined)</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str2.<span class="property">name</span>);</span><br><span class="line"><span class="keyword">let</span> num2 = <span class="number">11</span>;</span><br><span class="line"><span class="comment">//调用原始的方法, 创建临时对象( new Number() )</span></span><br><span class="line">num2 = num2.<span class="title function_">toString</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> num2, num2);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>在js中,除了直接创建原始值外,也可以创建原始值的对象(但一定不要用这种方式创建)</p>
+<ul>
+<li><p>通过<code>new String()</code>,可以创建String类型的对象</p>
+</li>
+<li><p>通过<code>new Number()</code>,可以创建Number类型的对象</p>
+</li>
+<li><p>通过<code>new Boolean()</code>,可以创建Boolean类型的对象</p>
+</li>
+</ul>
+<p><strong>js中的包装类(五个)</strong>:</p>
+<p>旧包装类(还可以通过new创建实例)</p>
+<ul>
+<li>String  –&gt; 字符串包装为String对象</li>
+<li>Number  –&gt; 数值包装为Number对象</li>
+<li>Boolean  –&gt; 布尔值包装为Boolean对象</li>
+</ul>
+<p>新包装类(js后期新增, 不能通过new创建实例)</p>
+<ul>
+<li>BigInt  –&gt; 大整数包装为BigInt对象</li>
+<li>Symbol  –&gt; 符号包装为Symbol对象</li>
+</ul>
+<p><strong>通过包装类可以将原始值包装成一个对象</strong>:</p>
+<ul>
+<li>当我们<strong>对一个原始值调用方法或属性时</strong>, js解释器会<strong>临时</strong>(创建后即销毁)将原始值<strong>包装为对应的对象</strong>,然后<strong>调用这个对象的方法或者属性</strong>,且<strong>每次调用都会创建临时的对象</strong></li>
+<li>null与undefined无法调用toString,因为他们没有包装类</li>
+</ul>
+<p><strong>由于原始值会被临时转换成对应的对象,这就意味着对象中的方法都可以直接通过原始值进行调用</strong></p>
+</blockquote>
+<h2 id="字符串的方法"><a href="#字符串的方法" class="headerlink" title="字符串的方法"></a>字符串的方法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;hello HELLO&#x27;</span>;</span><br><span class="line"><span class="keyword">let</span> str2 = <span class="string">&#x27;123@345@567@789&#x27;</span></span><br><span class="line"><span class="comment">//获取字符串的长度</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="property">length</span>);</span><br><span class="line"><span class="comment">//根据索引获取字符</span></span><br><span class="line"><span class="keyword">let</span> re = str[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> c <span class="keyword">of</span> str) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(c);</span><br><span class="line">&#125;</span><br><span class="line">re = str.<span class="title function_">at</span>(-<span class="number">2</span>); <span class="comment">//可以传递负值</span></span><br><span class="line">re = str.<span class="title function_">charAt</span>(<span class="number">1</span>); <span class="comment">//不可以传递负值</span></span><br><span class="line"><span class="comment">//用来连接两个或多个字符串</span></span><br><span class="line">re = str.<span class="title function_">concat</span>(str, str2)</span><br><span class="line"><span class="comment">//检查字符串中是否包含某个字符, 返回布尔值, 第二个参数表示从第几个索引位置检查</span></span><br><span class="line">re = str.<span class="title function_">includes</span>(<span class="string">&#x27;e&#x27;</span>, <span class="number">1</span>);</span><br><span class="line"><span class="comment">//返回所查字符所在的第一个索引位置, 返回Number</span></span><br><span class="line">re = str.<span class="title function_">indexOf</span>(<span class="string">&#x27;hell&#x27;</span>); <span class="comment">//从前往后查询</span></span><br><span class="line">re = str.<span class="title function_">lastIndexOf</span>(<span class="string">&#x27;hell&#x27;</span>); <span class="comment">//从后往前查询</span></span><br><span class="line"><span class="comment">//检查一个字符是否以指定内容结尾</span></span><br><span class="line">re = str.<span class="title function_">startsWith</span>(<span class="string">&#x27;hell&#x27;</span>); <span class="comment">//从前往后</span></span><br><span class="line">re = str.<span class="title function_">endsWith</span>(<span class="string">&#x27;ello&#x27;</span>); <span class="comment">// 从后往前</span></span><br><span class="line"><span class="comment">//指定字符串长度, 然后补齐</span></span><br><span class="line"><span class="comment">//指定字符串长度, 然后补齐</span></span><br><span class="line">re = str.<span class="title function_">padEnd</span>(<span class="number">15</span>, <span class="string">&#x27;@@@&#x27;</span>); <span class="comment">//补在后面</span></span><br><span class="line">re = str.<span class="title function_">padStart</span>(<span class="number">15</span>, <span class="string">&#x27;@@@&#x27;</span>) <span class="comment">//补在前面</span></span><br><span class="line"><span class="comment">//使字符串重复, 参数: 重复次数</span></span><br><span class="line">re = str.<span class="title function_">repeat</span>(<span class="number">2</span>);</span><br><span class="line"><span class="comment">//指定字符, 替换字符串中的内容</span></span><br><span class="line">re = str.<span class="title function_">replace</span>(<span class="string">&#x27;ll&#x27;</span>, <span class="string">&#x27;kk&#x27;</span>); <span class="comment">//替换第一个</span></span><br><span class="line">re = str.<span class="title function_">replaceAll</span>(<span class="string">&#x27;ll&#x27;</span>, <span class="string">&#x27;kk&#x27;</span>); <span class="comment">//替换全部</span></span><br><span class="line"><span class="comment">//截取字符串</span></span><br><span class="line">re = str.<span class="title function_">slice</span>(<span class="number">5</span>, <span class="number">10</span>);</span><br><span class="line">re = str.<span class="title function_">substring</span>(<span class="number">10</span>, <span class="number">5</span>);<span class="comment">//参数位置不受限制</span></span><br><span class="line">re = str.<span class="title function_">substr</span>(<span class="number">0</span>, <span class="number">2</span>);<span class="comment">//从索引0开始截取2个</span></span><br><span class="line"><span class="comment">//拆分字符串为数组</span></span><br><span class="line">re = str2.<span class="title function_">split</span>(<span class="string">&#x27;@&#x27;</span>); <span class="comment">//指定要拆掉那个字符</span></span><br><span class="line"><span class="comment">//字符串转换大小写</span></span><br><span class="line">re = str.<span class="title function_">toLowerCase</span>(); <span class="comment">//转换为小写</span></span><br><span class="line">re = str.<span class="title function_">toUpperCase</span>(); <span class="comment">//转换为大写</span></span><br><span class="line"><span class="comment">//去除字符串空格</span></span><br><span class="line"><span class="keyword">let</span> str3 = <span class="string">&#x27;  张 三  &#x27;</span></span><br><span class="line">re = str3.<span class="title function_">trim</span>(); <span class="comment">//去除两边空格</span></span><br><span class="line">re = str3.<span class="title function_">trimStart</span>(); <span class="comment">//去除开始空格</span></span><br><span class="line">re = str3.<span class="title function_">trimEnd</span>(); <span class="comment">//去除结尾空格</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> re, re);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>字符串</strong>:</p>
+<ul>
+<li>字符串其本质就是<strong>一个字符数组</strong>,因此许多方法与数组类似</li>
+</ul>
+</blockquote>
+<h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//构造函数创建正则表达式对象</span></span><br><span class="line"><span class="keyword">let</span> reg = <span class="keyword">new</span> <span class="title class_">RegExp</span>(<span class="string">&quot;a&quot;</span>);</span><br><span class="line"><span class="keyword">let</span> str = <span class="string">&quot;a&quot;</span>; <span class="comment">//true</span></span><br><span class="line">str = <span class="string">&quot;b&quot;</span>; <span class="comment">//false</span></span><br><span class="line">str = <span class="string">&quot;abc&quot;</span>; <span class="comment">//true</span></span><br><span class="line">str = <span class="string">&quot;bbabc&quot;</span>; <span class="comment">//true</span></span><br><span class="line"><span class="comment">//使用reg的test属性进行测试,检查字符串是否符合规则,返回一个布尔值</span></span><br><span class="line"><span class="keyword">let</span> result = reg.<span class="title function_">test</span>(str);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>正则表达式</strong>:</p>
+<ul>
+<li>定义一个字符串的规则,把符合规则的字符串提取出来</li>
+<li>正则表达式也是js中的一个对象</li>
+</ul>
+<p><strong>创建方式</strong>:</p>
+<ul>
+<li>构造函数:<code>new RegExp()</code>,参数1传递正则表达式,参数2传递正则的匹配模式</li>
+<li>字面量:<code>str = //</code></li>
+</ul>
+</blockquote>
+<h3 id="正则表达式的方法"><a href="#正则表达式的方法" class="headerlink" title="正则表达式的方法"></a>正则表达式的方法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使用字面量创建正则表达式</span></span><br><span class="line"><span class="keyword">let</span> re = <span class="regexp">/b/</span>; <span class="comment">//检查是否包含a</span></span><br><span class="line">re = <span class="regexp">/a|b/</span>; <span class="comment">//检查是否包含a或b</span></span><br><span class="line">re = <span class="regexp">/abc|cde/</span>; <span class="comment">//检查是否包含abc或者cde</span></span><br><span class="line">re = <span class="regexp">/[a-z]/</span>; <span class="comment">//检查是否包含所有小写字母</span></span><br><span class="line">re = <span class="regexp">/[A-Z]/</span>; <span class="comment">//检查是否包含所有大写字母</span></span><br><span class="line">re = <span class="regexp">/[A-z]/</span>; <span class="comment">//检查是否包含所有字母</span></span><br><span class="line">re = <span class="regexp">/[0-9]/</span>; <span class="comment">//检查是否包含所有的数字</span></span><br><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;4554774&#x27;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(re.<span class="title function_">test</span>(str));</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>正则的方法</strong>:</p>
+<ul>
+<li><code>|</code>在正则中表示或(整体或, 即符号左右两边的整体)</li>
+<li><code>[]</code>字符集或,在[]中的内容都是或的关系</li>
+<li><code>[^x]</code>除了x</li>
+<li><code>.</code>表示除了换行外的所有字符</li>
+<li><code>&#123;m&#125;</code>正好m个</li>
+<li><code>&#123;m，&#125;</code>至少m个</li>
+<li><code>&#123;m, n&#125;</code>m到n个</li>
+<li><code>+</code>至少一个</li>
+<li><code>*</code>任意数量个</li>
+<li><code>?</code>0-1个</li>
+<li><code>^</code>表示开头</li>
+<li><code>$</code>表示结尾</li>
+<li><code>()</code>分组</li>
+</ul>
+<p><strong>正则的属性方法</strong>:</p>
+<ul>
+<li><code>.test()</code>:测试字符串,返回一个布尔值</li>
+<li><code>.exec()</code>:提取符合规则的字符串,返回一个数组</li>
+</ul>
+<p><strong>其他字符集</strong>:</p>
+<ul>
+<li><code>\w</code>任意的单词字符</li>
+<li><code>\W</code>不包含任意的单词字符</li>
+<li><code>\d</code>任意数字</li>
+<li><code>\D</code>除了任意数字</li>
+<li><code>\s</code>空格</li>
+<li><code>\S</code>除了空格</li>
+<li><code>\b</code>单词边界</li>
+<li><code>\B</code>除了单词边界</li>
+</ul>
+<p><strong>匹配模式</strong>:</p>
+<ul>
+<li><code>i</code>忽略大小写</li>
+<li><code>g</code>全局匹配</li>
+</ul>
+</blockquote>
+<h3 id="正则练习"><a href="#正则练习" class="headerlink" title="正则练习"></a>正则练习</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//提取字符串中的手机号</span></span><br><span class="line"><span class="keyword">let</span> str = <span class="string">&quot;abcdfrf15716374484dvbrfhe13744861694asvbvuerivb15416585487&quot;</span>;</span><br><span class="line"><span class="comment">//定义正则</span></span><br><span class="line"><span class="keyword">let</span> re = <span class="regexp">/^1[3-9]\d&#123;9&#125;$/g</span>;</span><br><span class="line"><span class="comment">//隐藏手机号中间的4位数字</span></span><br><span class="line">re = <span class="regexp">/^(1[3-9]\d)\d&#123;4&#125;(\d&#123;4&#125;)$/g</span>;</span><br><span class="line"><span class="comment">//利用while循环提取手机号</span></span><br><span class="line"><span class="keyword">let</span> result;</span><br><span class="line"><span class="keyword">while</span>(result = re.<span class="title function_">exec</span>(str)) &#123;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result[<span class="number">1</span>] + <span class="string">&quot;****&quot;</span> + result[<span class="number">2</span>]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="字符串中的正则方法"><a href="#字符串中的正则方法" class="headerlink" title="字符串中的正则方法"></a>字符串中的正则方法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//字符串中的方法结合正则表达式</span></span><br><span class="line"><span class="keyword">let</span> str = <span class="string">&quot;王五abc张三adc李四&quot;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">split</span>(<span class="regexp">/a[bd]c/</span>));</span><br><span class="line"><span class="keyword">let</span> str2 = <span class="string">&quot;abcdfrf15716374484dvbrfhe13744861694asvbvuerivb15416585487&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> result = str2.<span class="title function_">search</span>(<span class="regexp">/1[3-9]\d&#123;9&#125;/</span>);</span><br><span class="line">result = str2.<span class="title function_">replace</span>(<span class="regexp">/1[3-9]\d&#123;9&#125;/g</span>, <span class="string">&quot;😍&quot;</span>);</span><br><span class="line">result = str2.<span class="title function_">match</span>(<span class="regexp">/1[3-9]\d&#123;9&#125;/g</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result);</span><br><span class="line">result = str2.<span class="title function_">matchAll</span>(<span class="regexp">/1[3-9](\d&#123;9&#125;)/g</span>);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i <span class="keyword">of</span> result) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<ul>
+<li><code>split()</code>根据正则表达式第一个数组进行拆分</li>
+<li><code>search()</code>搜索符合规则的正则表达式的内容第一次出现的内容的位置,并返回索引值</li>
+<li><code>replace()</code>根据正则表达式替换字符串中的指定内容</li>
+<li><code>match()</code>根据正则表达式去匹配字符串中符合规则的内容,<strong>不全局匹配可以使用正则分组</strong></li>
+<li><code>matchAll()</code>根据正则表达式去匹配字符串中符合规则的内容,必须全局匹配,**可以使用正则分组,**且返回一个迭代器(迭代器一般使用<code>for..of</code>进行遍历)</li>
+</ul>
+</blockquote>
+<h2 id="垃圾回收"><a href="#垃圾回收" class="headerlink" title="垃圾回收"></a>垃圾回收</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//obj指向对象</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">name</span>: <span class="string">&#x27;张三&#x27;</span>&#125;;</span><br><span class="line"><span class="comment">//断开指向,释放指针,垃圾回收</span></span><br><span class="line">obj = <span class="literal">null</span>;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>垃圾回收(Garbage Collection)</strong>:</p>
+<ul>
+<li>如果一个对象没有任何变量对其引用,那么这个对象就是垃圾</li>
+<li>js中有自动的垃圾回收机制, 我们只需把不在使用的变量设置为null,使其自动回收</li>
+</ul>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://hun.ghao.live">ehco</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://hun.ghao.live/posts/7e4551ad.html">https://hun.ghao.live/posts/7e4551ad.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://hun.ghao.live" target="_blank">Hun</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF-%E5%9F%BA%E7%A1%80-js/">前端/基础/js</a></div><div class="post_share"><div class="social-share" data-image="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201510%2F27%2F20151027123805_jxVmL.thumb.400_0.jpeg&amp;refer=http%3A%2F%2Fc-ssl.duitang.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1668955992&amp;t=3a44f605814c1174886c67f897e5590d" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/49249186.html" title="10js内置对象1"><img class="cover" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201510%2F27%2F20151027123805_jxVmL.thumb.400_0.jpeg&amp;refer=http%3A%2F%2Fc-ssl.duitang.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1668955992&amp;t=3a44f605814c1174886c67f897e5590d" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">10js内置对象1</div></div></a></div><div class="next-post pull-right"><a href="/posts/85e1dfa.html" title="12DOM"><img class="cover" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Faf89e3bb5c141732d945544948fff24df6f36945bf22-DfOqnD_fw658&amp;refer=http%3A%2F%2Fhbimg.b0.upaiyun.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1668956014&amp;t=cce783c22dd4066420844884c5ecdb78" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">12DOM</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/338f2ecd.html" title="01js数据类型转换"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-10-21</div><div class="title">01js数据类型转换</div></div></a></div><div><a href="/posts/4b818218.html" title="02js运算符"><img class="cover" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Faf89e3bb5c141732d945544948fff24df6f36945bf22-DfOqnD_fw658&refer=http%3A%2F%2Fhbimg.b0.upaiyun.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668956014&t=cce783c22dd4066420844884c5ecdb78" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-10-21</div><div class="title">02js运算符</div></div></a></div><div><a href="/posts/9ab87891.html" title="03js流程控制语句"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-10-21</div><div class="title">03js流程控制语句</div></div></a></div><div><a href="/posts/4b7503ac.html" title="04js对象"><img class="cover" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Faf89e3bb5c141732d945544948fff24df6f36945bf22-DfOqnD_fw658&refer=http%3A%2F%2Fhbimg.b0.upaiyun.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668956014&t=cce783c22dd4066420844884c5ecdb78" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-10-21</div><div class="title">04js对象</div></div></a></div><div><a href="/posts/b31b0823.html" title="05js函数"><img class="cover" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Faf89e3bb5c141732d945544948fff24df6f36945bf22-DfOqnD_fw658&refer=http%3A%2F%2Fhbimg.b0.upaiyun.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668956014&t=cce783c22dd4066420844884c5ecdb78" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-10-21</div><div class="title">05js函数</div></div></a></div><div><a href="/posts/f9dc628f.html" title="06js面向对象"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-10-21</div><div class="title">06js面向对象</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC81NzA1NS8zMzUxOQ=="></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/./images/touxiang.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">ehco</div><div class="author-info__description">学习笔记,学如逆水行舟</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">58</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/rhco666"><i class="fab fa-github"></i><span>关注我</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/ehco666" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到hun博客</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#js%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A12"><span class="toc-number">1.</span> <span class="toc-text">js内置对象2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8C%85%E8%A3%85%E7%B1%BB"><span class="toc-number">1.1.</span> <span class="toc-text">包装类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">1.2.</span> <span class="toc-text">字符串的方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">1.3.</span> <span class="toc-text">正则表达式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">1.3.1.</span> <span class="toc-text">正则表达式的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E7%BB%83%E4%B9%A0"><span class="toc-number">1.3.2.</span> <span class="toc-text">正则练习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%AD%A3%E5%88%99%E6%96%B9%E6%B3%95"><span class="toc-number">1.3.3.</span> <span class="toc-text">字符串中的正则方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6"><span class="toc-number">1.4.</span> <span class="toc-text">垃圾回收</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/dd3b78a2.html" title="vue组件"><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Faf89e3bb5c141732d945544948fff24df6f36945bf22-DfOqnD_fw658&amp;refer=http%3A%2F%2Fhbimg.b0.upaiyun.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1668956014&amp;t=cce783c22dd4066420844884c5ecdb78" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue组件"/></a><div class="content"><a class="title" href="/posts/dd3b78a2.html" title="vue组件">vue组件</a><time datetime="2023-03-03T06:04:55.050Z" title="发表于 2023-03-03 06:04:55">2023-03-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/587e1325.html" title="vue组件中的属性"><img src="https://img0.baidu.com/it/u=302718224,1591236974&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=600&amp;h=450" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue组件中的属性"/></a><div class="content"><a class="title" href="/posts/587e1325.html" title="vue组件中的属性">vue组件中的属性</a><time datetime="2023-03-03T06:04:55.050Z" title="发表于 2023-03-03 06:04:55">2023-03-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/ac5231a8.html" title="vue组件中的方法"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue组件中的方法"/></a><div class="content"><a class="title" href="/posts/ac5231a8.html" title="vue组件中的方法">vue组件中的方法</a><time datetime="2023-03-03T06:04:55.050Z" title="发表于 2023-03-03 06:04:55">2023-03-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/e46a1137.html" title="vue指令"><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Faf89e3bb5c141732d945544948fff24df6f36945bf22-DfOqnD_fw658&amp;refer=http%3A%2F%2Fhbimg.b0.upaiyun.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1668956014&amp;t=cce783c22dd4066420844884c5ecdb78" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue指令"/></a><div class="content"><a class="title" href="/posts/e46a1137.html" title="vue指令">vue指令</a><time datetime="2023-03-03T06:04:55.050Z" title="发表于 2023-03-03 06:04:55">2023-03-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/9a87647.html" title="vue3样式"><img src="https://img0.baidu.com/it/u=302718224,1591236974&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=600&amp;h=450" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue3样式"/></a><div class="content"><a class="title" href="/posts/9a87647.html" title="vue3样式">vue3样式</a><time datetime="2023-03-03T06:04:55.050Z" title="发表于 2023-03-03 06:04:55">2023-03-03</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By ehco</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadLivere () {
+  if (typeof LivereTower === 'object') {
+    window.LivereTower.init()
+  }
+  else {
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  }
+}
+
+if ('Livere' === 'Livere' || !false) {
+  if (false) btf.loadComment(document.getElementById('lv-container'), loadLivere)
+  else loadLivere()
+}
+else {
+  function loadOtherComment () {
+    loadLivere()
+  }
+}</script></div><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
